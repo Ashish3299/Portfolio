@@ -49,7 +49,7 @@ const Loader = ({finishLoading}: any) => {
   }, []);
 
   return (
-    <StyledLoader className="loader">
+    <StyledLoader className="loader" isMounted={isMounted}>
       {/* <Helmet bodyAttributes={{ class: `hidden` }} /> */}
 
       <div className="logo-wrapper">
@@ -61,9 +61,9 @@ const Loader = ({finishLoading}: any) => {
 
 export default Loader;
 
-const StyledLoader = styled.div`
+const StyledLoader = styled.div<{ isMounted?: boolean; }>`
   ${({ theme }) => theme?.mixins?.flexCenter};
-  
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -78,7 +78,8 @@ const StyledLoader = styled.div`
     width: max-content;
     max-width: 100px;
     transition: var(--transition);
-
+    opacity: ${props => (props.isMounted ? 1 : 0)};
+    
     svg {
       display: block;
       width: 100%;

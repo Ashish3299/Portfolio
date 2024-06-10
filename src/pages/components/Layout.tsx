@@ -3,6 +3,10 @@ import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '../../styles';
 import { useRouter } from 'next/router';
 import Loader from './Loader';
+import Nav from './Nav';
+import Social from './Social';
+import Email from './email';
+import Footer from './footer';
 
 
 const Layout = ({children}: any) => {  
@@ -56,13 +60,13 @@ const Layout = ({children}: any) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
-              {/* <Nav isHome={isHome} />
+              <Nav isHome={isHome} />
               <Social isHome={isHome} />
-              <Email isHome={isHome} /> */}
+              <Email isHome={isHome} />
 
               <div id="content">
-                {/* {children}
-                <Footer /> */}
+                {children}
+                <Footer />  
               </div>
             </StyledContent>
           )}
