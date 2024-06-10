@@ -1,17 +1,25 @@
 import PageHead from "./components/PageHead";
 import { createClient } from "@/prismicio";
 import { GetStaticPropsContext } from "next";
-
 import React from "react";
+import styled from "styled-components";
+import Layout from "./components/Layout";
+import { useRouter } from "next/router";
 
-const Home = () => {  
-  
+const Home = () => {
+  const { pathname } = useRouter();
+  const isHome = pathname === '/';
+
   return (
     <>
       <PageHead title="Ashish Kumar" />
-      <main>
-        <h1>Hello World</h1>
-      </main>
+      <Layout>
+        <StyledMainContainer className="fillHeight">
+          <main>
+            <h1>Hello World</h1>
+          </main>
+        </StyledMainContainer>
+      </Layout>
     </>
   );
 };
@@ -20,10 +28,7 @@ export async function getStaticProps({ previewData }: GetStaticPropsContext) {
   const client = createClient({ previewData });
 
   // Fetch Homepage Data
-  const page = await client.getSingle('homepage');
-
-  console.log(page);
-  
+  const page = await client.getSingle('homepage');  
 
   return {
     props: {
@@ -33,5 +38,8 @@ export async function getStaticProps({ previewData }: GetStaticPropsContext) {
   };
 }
 
-
 export default Home;
+
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`;
