@@ -1,0 +1,62 @@
+{
+  "format": "custom",
+  "id": "experience",
+  "label": "Experience",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Company Name",
+          "placeholder": ""
+        }
+      },
+      "startDate": {
+        "type": "Date",
+        "config": {
+          "label": "Start Date",
+          "placeholder": ""
+        }
+      },
+      "endDate": {
+        "type": "Date",
+        "config": {
+          "label": "End Date",
+          "placeholder": ""
+        }
+      },
+      "website": {
+        "type": "Link",
+        "config": {
+          "label": "Website",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "role": {
+        "type": "Text",
+        "config": {
+          "label": "Working Role",
+          "placeholder": ""
+        }
+      },
+      "descr": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descr",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

@@ -23,7 +23,26 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "get_in_touch": {
+              "type": "SharedSlice"
+            },
+            "projects_grid": {
+              "type": "SharedSlice"
+            },
+            "intro_section": {
+              "type": "SharedSlice"
+            },
+            "featured_projects": {
+              "type": "SharedSlice"
+            },
+            "about_section": {
+              "type": "SharedSlice"
+            },
+            "experience_section": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

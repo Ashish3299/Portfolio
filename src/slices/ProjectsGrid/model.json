@@ -1,8 +1,8 @@
 {
-  "id": "hero_section",
+  "id": "projects_grid",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "ProjectsGrid",
+  "description": "ProjectsGrid",
   "variations": [
     {
       "id": "default",

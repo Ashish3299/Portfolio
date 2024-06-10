@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "life",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "girl",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute eu commodo esse irure mollit ad excepteur nisi velit pariatur consectetur sint cupidatat."
+						}
+					}
+				]
+			},
+			"CtaBtnText": {
+				"__TYPE__": "FieldContent",
+				"value": "occasionally",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

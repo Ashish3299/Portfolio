@@ -5,7 +5,7 @@
 		"primary": {
 			"title": {
 				"__TYPE__": "FieldContent",
-				"value": "other",
+				"value": "forward",
 				"type": "Text"
 			},
 			"description": {
@@ -14,7 +14,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Magna mollit ea et tempor."
+							"text": "Reprehenderit Lorem ex pariatur qui ut. Et eiusmod consequat officia officia magna laborum ex est aliqua sit do ipsum cillum fugiat. Veniam amet mollit nisi enim proident sit enim non mollit dolor magna dolor duis."
 						}
 					}
 				]
