@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import IconLoader from "./icons/IconLoader";
+import IconLoader from "./icons/loader";
 import anime from "animejs";
 
 const Loader: React.FC<any> = ({ finishLoading }) => {

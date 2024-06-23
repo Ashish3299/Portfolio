@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "../Loader";
+import Footer from "../Footer";
 
 type Props = {
   children: any;
@@ -59,7 +60,7 @@ const Layout: React.FC<Props> = ({ children, location }) => {
 
             <div id="content">
               {children}
-              {/* <Footer /> */}
+              <Footer />
             </div>
           </StyledContent>
         )}
