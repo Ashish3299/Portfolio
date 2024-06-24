@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Featured from "@/components/sections/Featured";
 import Hero from "@/components/sections/Hero";
 import Jobs from "@/components/sections/Jobs";
+import Projects from "@/components/sections/Projects";
 import styled from "styled-components";
 
 const location = {
@@ -20,7 +21,7 @@ export default function Home() {
           <About />
           <Jobs />
           <Featured />
-          {/* <Projects /> */}
+          <Projects />
           {/* <Contact /> */}
         </StyledMainContainer>
       </Layout>
