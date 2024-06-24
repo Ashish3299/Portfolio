@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout/default";
 import PageHead from "@/components/PageHead";
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import Featured from "@/components/sections/Featured";
 import Hero from "@/components/sections/Hero";
 import Jobs from "@/components/sections/Jobs";
@@ -22,7 +23,7 @@ export default function Home() {
           <Jobs />
           <Featured />
           <Projects />
-          {/* <Contact /> */}
+          <Contact />
         </StyledMainContainer>
       </Layout>
     </>
