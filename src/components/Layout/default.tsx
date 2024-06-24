@@ -4,6 +4,7 @@ import Loader from "../Loader";
 import Footer from "../Footer";
 import Social from "../Social";
 import Email from "../Email";
+import Navbar from "../Navbar";
 
 type Props = {
   children: any;
@@ -56,7 +57,7 @@ const Layout: React.FC<Props> = ({ children, location }) => {
           <Loader finishLoading={() => setIsLoading(false)} />
         ) : (
           <StyledContent>
-            {/* <Nav isHome={isHome} /> */}
+            <Navbar isHome={isHome} />
             <Social isHome={isHome} />
             <Email isHome={isHome} />
 
