@@ -1,20 +1,31 @@
 import Layout from "@/components/Layout/default";
 import PageHead from "@/components/PageHead";
-
+import Hero from "@/components/sections/Hero";
+import styled from "styled-components";
 
 const location = {
-  pathname: '/'
-}
+  pathname: "/",
+};
 
 export default function Home() {
   return (
     <>
       <PageHead />
       <Layout location={location}>
-        <main>
-          <h1>Hello World</h1>
-        </main>
+        <StyledMainContainer className="fillHeight">
+          <Hero />
+          {/* <About /> */}
+          {/* <Jobs /> */}
+          {/* <Featured /> */}
+          {/* <Projects /> */}
+          {/* <Contact /> */}
+        </StyledMainContainer>
       </Layout>
     </>
   );
 }
+
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`;
+
