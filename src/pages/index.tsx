@@ -2,6 +2,7 @@ import Layout from "@/components/Layout/default";
 import PageHead from "@/components/PageHead";
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
+import Jobs from "@/components/sections/Jobs";
 import styled from "styled-components";
 
 const location = {
@@ -16,7 +17,7 @@ export default function Home() {
         <StyledMainContainer className="fillHeight">
           <Hero />
           <About />
-          {/* <Jobs /> */}
+          <Jobs />
           {/* <Featured /> */}
           {/* <Projects /> */}
           {/* <Contact /> */}
