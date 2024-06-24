@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout/default";
 import PageHead from "@/components/PageHead";
+import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import styled from "styled-components";
 
@@ -14,7 +15,7 @@ export default function Home() {
       <Layout location={location}>
         <StyledMainContainer className="fillHeight">
           <Hero />
-          {/* <About /> */}
+          <About />
           {/* <Jobs /> */}
           {/* <Featured /> */}
           {/* <Projects /> */}

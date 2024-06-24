@@ -75,14 +75,14 @@ const Menu = () => {
   useEffect(() => {
     document.addEventListener("keydown", onKeyDown);
     window.addEventListener("resize", onResize);
-    document.body.classList.add("hidden");
+    // document.body.classList.add("hidden");
 
     setFocusables();
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("resize", onResize);
-      document.body.classList.remove("hidden");
+      // document.body.classList.remove("hidden");
     };
   }, []);
 

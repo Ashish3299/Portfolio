@@ -44,11 +44,11 @@ const Loader: React.FC<any> = ({ finishLoading }) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
-    document.body.classList.add("hidden");
+    // document.body.classList.add("hidden");
     animate();
     return () => {
       clearTimeout(timeout);
-      document.body.classList.remove("hidden");
+      // document.body.classList.remove("hidden");
     };
   }, []);
 
