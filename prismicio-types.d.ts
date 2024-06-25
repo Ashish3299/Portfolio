@@ -31,6 +31,17 @@ interface ExperienceDocumentData {
   startDate: prismic.DateField;
 
   /**
+   * Website field in *Experience*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.website
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  website: prismic.LinkField;
+
+  /**
    * End Date field in *Experience*
    *
    * - **Field Type**: Date
@@ -40,17 +51,6 @@ interface ExperienceDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   endDate: prismic.DateField;
-
-  /**
-   * Website field in *Experience*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: experience.website
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  website: prismic.LinkToMediaField;
 
   /**
    * Working Role field in *Experience*
@@ -376,24 +376,24 @@ interface ProjectDocumentData {
   /**
    * Github field in *Project*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: project.github
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  github: prismic.LinkToMediaField;
+  github: prismic.LinkField;
 
   /**
    * URL field in *Project*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: project.url
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  url: prismic.LinkToMediaField;
+  url: prismic.LinkField;
 
   /**
    * Tech field in *Project*

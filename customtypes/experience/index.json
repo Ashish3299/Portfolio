@@ -26,19 +26,19 @@
           "placeholder": ""
         }
       },
-      "endDate": {
-        "type": "Date",
-        "config": {
-          "label": "End Date",
-          "placeholder": ""
-        }
-      },
       "website": {
         "type": "Link",
         "config": {
           "label": "Website",
           "placeholder": "",
-          "select": "media"
+          "select": null
+        }
+      },
+      "endDate": {
+        "type": "Date",
+        "config": {
+          "label": "End Date",
+          "placeholder": ""
         }
       },
       "role": {
