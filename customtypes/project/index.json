@@ -60,13 +60,20 @@
           "select": null
         }
       },
-      "tech": {
-        "type": "StructuredText",
+      "techs": {
+        "type": "Group",
         "config": {
-          "label": "Tech",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "list-item"
+          "label": "Techs",
+          "repeat": true,
+          "fields": {
+            "tech": {
+              "type": "Text",
+              "config": {
+                "label": "Tech",
+                "placeholder": ""
+              }
+            }
+          }
         }
       }
     },

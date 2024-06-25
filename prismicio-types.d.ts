@@ -326,6 +326,21 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 /**
+ * Item in *Project → Techs*
+ */
+export interface ProjectDocumentDataTechsItem {
+  /**
+   * Tech field in *Project → Techs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.techs[].tech
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tech: prismic.KeyTextField;
+}
+
+/**
  * Content for Project documents
  */
 interface ProjectDocumentData {
@@ -396,15 +411,15 @@ interface ProjectDocumentData {
   url: prismic.LinkField;
 
   /**
-   * Tech field in *Project*
+   * Techs field in *Project*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: project.tech
+   * - **API ID Path**: project.techs[]
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  tech: prismic.RichTextField /**
+  techs: prismic.GroupField<Simplify<ProjectDocumentDataTechsItem>> /**
    * Meta Title field in *Project*
    *
    * - **Field Type**: Text
@@ -1041,6 +1056,7 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       ProjectDocument,
       ProjectDocumentData,
+      ProjectDocumentDataTechsItem,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
