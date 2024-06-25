@@ -30,12 +30,16 @@ const ContactSection = ({ slice }: ContactSectionProps): JSX.Element => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">{subHeading}</h2>
-      <h2 className="title">{heading}</h2>
-      <PrismicRichText field={description} />
-      <Link className="email-link" href={`mailto:${email}`}>
-        {CtaBtnText}
-      </Link>
+      {subHeading && (
+        <h2 className="numbered-heading overline">{subHeading}</h2>
+      )}
+      {heading && <h2 className="title">{heading}</h2>}
+      {description && <PrismicRichText field={description} />}
+      {CtaBtnText && (
+        <Link className="email-link" href={`mailto:${email}`}>
+          {CtaBtnText}
+        </Link>
+      )}
     </StyledContactSection>
   );
 };

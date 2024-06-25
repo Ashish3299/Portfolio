@@ -16,7 +16,6 @@ export type IntroSectionProps = SliceComponentProps<Content.IntroSectionSlice>;
  * Component for "IntroSection" Slices.
  */
 const IntroSection = ({ slice }: IntroSectionProps): JSX.Element => {
-  console.log(slice);
   const { subHeading, heading, description, CtaBtnText, CtaBtnLink } =
     slice.primary;
 
@@ -32,8 +31,8 @@ const IntroSection = ({ slice }: IntroSectionProps): JSX.Element => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>{subHeading}</h1>;
-  const two = (
+  const one = subHeading && <h1>{subHeading}</h1>;
+  const two = heading && (
     <PrismicRichText
       field={heading}
       components={{
@@ -42,12 +41,12 @@ const IntroSection = ({ slice }: IntroSectionProps): JSX.Element => {
       }}
     />
   );
-  const three = (
+  const three = description && (
     <>
       <PrismicRichText field={description} />
     </>
   );
-  const four = (
+  const four = CtaBtnText && CtaBtnLink && (
     <PrismicNextLink field={CtaBtnLink} className="email-link">
       {CtaBtnText}
     </PrismicNextLink>

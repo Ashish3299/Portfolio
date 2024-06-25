@@ -18,8 +18,6 @@ export type AboutSectionProps = SliceComponentProps<Content.AboutSectionSlice>;
  */
 const AboutSection = ({ slice }: AboutSectionProps): JSX.Element => {
   const { heading, description, image, technologies } = slice.primary;
-  console.log(technologies);
-
   const revealContainer = useRef<HTMLElement>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -32,28 +30,32 @@ const AboutSection = ({ slice }: AboutSectionProps): JSX.Element => {
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">{heading}</h2>
+      {heading && <h2 className="numbered-heading">{heading}</h2>}
 
       <div className="inner">
         <StyledText>
-          <PrismicRichText field={description} />
+          {description && <PrismicRichText field={description} />}
 
-          <ul className="skills-list">
-            {technologies &&
-              technologies.map((skill, i) => <li key={i}>{skill.tech}</li>)}
-          </ul>
+          {technologies && (
+            <ul className="skills-list">
+              {technologies &&
+                technologies.map((skill, i) => <li key={i}>{skill.tech}</li>)}
+            </ul>
+          )}
         </StyledText>
 
-        <StyledPic>
-          <div className="wrapper">
-            <PrismicNextImage
-              className="img"
-              field={image}
-              height={300}
-              width={300}
-            />
-          </div>
-        </StyledPic>
+        {image && (
+          <StyledPic>
+            <div className="wrapper">
+              <PrismicNextImage
+                className="img"
+                field={image}
+                height={300}
+                width={300}
+              />
+            </div>
+          </StyledPic>
+        )}
       </div>
     </StyledAboutSection>
   );
