@@ -1,11 +1,10 @@
-import Layout from '@/components/Layout/default';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components';
-import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { navDelay } from '@/utils';
-
+import Layout from "@/components/Layout/default";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { navDelay } from "@/utils";
 
 const Content = () => {
   return (
@@ -14,8 +13,8 @@ const Content = () => {
       <StyledSubtitle>Page Not Found</StyledSubtitle>
       <StyledHomeButton href="/">Go Home</StyledHomeButton>
     </StyledMainContainer>
-  )
-}
+  );
+};
 
 const NotFoundPage = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -30,13 +29,8 @@ const NotFoundPage = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const location = {
-    pathname: "/",
-  };
-  
-
   return (
-    <Layout location={location}>
+    <Layout>
       {/* <Helmet title="Page Not Found" /> */}
 
       {prefersReducedMotion ? (
@@ -53,8 +47,8 @@ const NotFoundPage = () => {
         </TransitionGroup>
       )}
     </Layout>
-  )
-}
+  );
+};
 
 export default NotFoundPage;
 

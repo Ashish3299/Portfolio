@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subHeading": {
+				"__TYPE__": "FieldContent",
+				"value": "thrown",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "year",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui laborum laboris proident excepteur mollit pariatur anim laboris eu."
+						}
+					}
+				]
+			},
+			"CtaBtnText": {
+				"__TYPE__": "FieldContent",
+				"value": "string",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@prismicio/client": "^7.6.0",
+    "@prismicio/next": "^1.6.0",
+    "@prismicio/react": "^2.8.0",
     "animejs": "^3.2.2",
     "file-loader": "^6.2.0",
     "next": "14.2.3",
-    "react": "^18",
+    "react": "^18.2.0",
     "react-dom": "^18",
     "react-transition-group": "^4.4.5",
     "scrollreveal": "^4.0.9",
@@ -20,14 +24,16 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.42",
     "@types/animejs": "^3.1.12",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.2.0",
     "@types/react-dom": "^18",
     "@types/react-transition-group": "^4.4.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "sass": "^1.77.6",
+    "slice-machine-ui": "^2.2.1",
     "typescript": "^5"
   },
   "resolutions": {

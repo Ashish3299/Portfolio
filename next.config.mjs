@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
+  env: {
+    PRISMIC_REPO_NAME: process.env.PRISMIC_REPO_NAME,
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(woff|woff2|eot|ttf|otf)$/i,

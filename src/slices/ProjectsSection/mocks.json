@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "closely",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum ipsum pariatur adipisicing ullamco anim nostrud laboris. Consequat cillum amet esse dolore ea incididunt id culpa excepteur minim ut do anim. Laborum esse consequat cupidatat incididunt."
+						}
+					}
+				]
+			},
+			"CtaBtnText": {
+				"__TYPE__": "FieldContent",
+				"value": "planning",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

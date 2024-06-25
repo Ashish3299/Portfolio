@@ -5,20 +5,22 @@ import Footer from "../Footer";
 import Social from "../Social";
 import Email from "../Email";
 import Navbar from "../Navbar";
+import { useRouter } from "next/router";
 
 type Props = {
   children: any;
-  location: any;
 };
 
-const Layout: React.FC<Props> = ({ children, location }) => {
-  const isHome = location.pathname === '/';
+const Layout: React.FC<Props> = ({ children }) => {
+  const router = useRouter();
+  const { pathname } = router;
+  const isHome = pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
     const allLinks = Array.from(document.querySelectorAll('a'));
-    if (allLinks.length > 0) {
+    if (allLinks.length > 0 && typeof window !== undefined) {
       allLinks.forEach(link => {
         if (link.host !== window.location.host) {
           link.setAttribute('rel', 'noopener noreferrer');
@@ -33,7 +35,8 @@ const Layout: React.FC<Props> = ({ children, location }) => {
       return;
     }
 
-    if (location.hash) {
+    if ( typeof window !== undefined && window.location.hash) {
+      const location = window.location
       const id = location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
         const el = document.getElementById(id);
@@ -47,7 +50,7 @@ const Layout: React.FC<Props> = ({ children, location }) => {
     handleExternalLinks();
   }, [isLoading]);
   return (
-    <>
+    <>            
       <div id="root">
         <a className="skip-to-content" href="#content">
           Skip to Content

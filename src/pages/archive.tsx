@@ -661,12 +661,8 @@ const ArchivePage = () => {
     // revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 10)));
   }, []);
 
-  const location = {
-    pathname: "/",
-  };
-
   return (
-    <Layout location={location}>
+    <Layout>
       {/* <Helmet title="Archive" /> */}
 
       <main>
