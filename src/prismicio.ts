@@ -13,17 +13,17 @@ export const repositoryName =
  *
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
-// export const linkResolver = (doc) => {  
-//   if (doc.type === 'homepage') {
-//     return '/';
-//   }
+export const linkResolver = (doc: { type: string; uid: any; }) => {  
+  if (doc.type === 'homepage') {
+    return '/';
+  }
 
-//   if (doc.type === 'page') {
-//     return `/${doc.uid}`;
-//   }
+  if (doc.type === 'page') {
+    return `/${doc.uid}`;
+  }
 
-//   return '/';
-// };
+  return '/';
+};
 
 // TODO: Update the routes array to match your project's route structure.
 const routes: prismic.ClientConfig["routes"] = [
